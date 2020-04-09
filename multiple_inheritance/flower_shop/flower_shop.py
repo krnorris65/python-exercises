@@ -1,6 +1,17 @@
-from flowers import Rose
+from flowers import Rose, Daisy, Alstroemeria, Lily, Poppy, BabysBreath
+from arrangements import Arrangement, ValentinesDay, MothersDay
 
-red = Rose()
+rose = Rose()
+daisy = Daisy()
+poppy = Poppy()
 
 
-print(red.color)
+
+vday = ValentinesDay()
+mothers_day = MothersDay()
+
+mothers_day.enhance(daisy)
+mothers_day.enhance(rose)
+
+vday.enhance(poppy)
+
