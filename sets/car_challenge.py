@@ -43,13 +43,17 @@ car_collection = dict()
 for make in makes:
     make_name = make[1]
     car_collection[make_name] = dict()
+    # current_make is a variable to reference later in the code so that we don't have to write car_collection[make_name] multiple times
+    current_make = car_collection[make_name]
+
     for model in models:
         model_make = model[2]
         make_num = make[0]
         if(model_make == make_num):
             model_num = model[0]
             model_name = model[1]
-            car_collection[make_name][model_name] = list()
+            current_make[model_name] = list()
+
             for car_color in available_car_colors:
                 avl_model = car_color[0]
                 avl_color = car_color[1]
@@ -58,18 +62,49 @@ for make in makes:
                         color_num = color[0]
                         color_name = color[1]
                         if(avl_color == color_num):
-                            car_collection[make_name][model_name].append(color_name)
+                            current_make[model_name].append(color_name)
 
 
-for (make, models) in car_collection.items():
-    print(make)
-    print("----------")
-    for (model, color_list) in models.items():
-        colors = ", ".join(color_list)
-        print(f"{model} available in {colors}")
-    print()
+# for (make, models) in car_collection.items():
+#     print(make)
+#     print("----------")
+#     for (model, color_list) in models.items():
+#         colors = ", ".join(color_list)
+#         print(f"{model} available in {colors}")
+#     print()
 
+# Toyota
+# ----------
+# Prius available in Charcoal, Brick, Ivory
+# Camry available in Black, Red, White
 
+# Nissan
+# ----------
+# Altima available in Black, Charcoal, White
+# Xterra available in Charcoal, Navy, Ivory
+# Sentra available in Charcoal, Blue, Ivory
+
+# Ford
+# ----------
+# Thunderbird available in Black, Red, White
+# F150 available in Black, Blue, Ivory
+
+# Mini
+# ----------
+# Countryman available in Charcoal, Navy, White
+# Cooper available in Red, Navy, Ivory
+
+# Honda
+# ----------
+# Accord available in Red, Blue, Ivory
+# Civic available in Black, Navy, White
+# Pilot available in Black, Brick, White
+
+# Dodge
+# ----------
+# Dart available in Charcoal, Red, White
+# Ram available in Charcoal, Blue, White
+# Charger available in Black, Brick, White
 # for make in makes:
 #     make_name = make[1]
 #     car_collection[make_name] = dict()
