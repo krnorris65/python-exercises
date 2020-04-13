@@ -31,6 +31,6 @@ def approximate_size(size, a_kilobyte_is_1024_bytes=True):
 
 if __name__ == '__main__':
     # The print() method is Python's console.log()
-    print(approximate_size(16384, False))
+    print(approximate_size(1638984, False))
     print(approximate_size(size=16384, a_kilobyte_is_1024_bytes=True))
-    print(approximate_size(-16384))
+    print(approximate_size(16384))
