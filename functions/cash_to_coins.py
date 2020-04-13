@@ -13,7 +13,7 @@ def calc_coins (amount):
     total_remaining = amount
     while(total_remaining != 0):
         if(total_remaining >= .25):
-            num_quarters = math.ceil(total_remaining/.25)
+            num_quarters = math.floor(total_remaining/.25)
             piggy_bank["quarters"] = num_quarters
             total_remaining -= num_quarters*.25
         elif(total_remaining >= .10):
