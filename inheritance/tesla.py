@@ -2,6 +2,7 @@ from vehicle import Vehicle
 
 class Tesla(Vehicle):
     def __init__(self):
+        super().__init__()
         self.battery_kwh = 0
 
     def drive(self):

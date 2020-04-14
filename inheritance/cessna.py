@@ -2,6 +2,7 @@ from vehicle import Vehicle
 
 class Cessna(Vehicle):
     def __init__(self):
+        super().__init__()
         self.fuel_capacity = 0
 
     def drive(self):
